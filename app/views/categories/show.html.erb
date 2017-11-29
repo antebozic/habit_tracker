@@ -1,0 +1,11 @@
+<div class="category show-category">
+  <div class="category-name">
+    <h2><%= @category.name %></h2>
+  </div>
+
+  <div class="category-img">
+    <img class='category-photo' src="<%= @category.img_url %>" alt="<%= @category.name %>"/>
+  </div>
+</div>
+
+<h3><%= link_to "<< Go Back", :back %></h3>

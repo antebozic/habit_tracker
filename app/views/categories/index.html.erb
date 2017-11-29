@@ -1,0 +1,8 @@
+<% @categories.each do |category| %>
+  <div class="category">
+    <div class="category-name">
+      <h2><%= category.name %></h2>
+    </div>
+    <img class='category-photo' src="<%= category.img_url %>" alt="<%= category.name %>"/>
+  </div>
+  <% end %>

@@ -1,0 +1,30 @@
+<div class="index-wrap">
+  <header>
+    <p><%= link_to "<< All Habits", habits_path, class: "btn-header header animated zoomIn" %></p>
+  </header>
+<section>
+
+
+<div class="each-habit habit-name animated zoomIn">
+<p class="btn"><%= @habit.name %></p>
+</div>
+
+<div class="goal">
+<p>Goal: <%= @habit.goal %></p>
+</div>
+
+<div class="occurrences">
+<% @occurrences.each do |occurrence| %>
+<p><%= occurrence.updated_at.strftime("%Y-%m-%d") %> <%= occurrence.note %></p>
+<% end %>
+<p> <%= link_to "(+) New Occurrence", new_habit_occurrence_path(@habit), class: "btn" %> </>
+</div>
+
+
+
+<span><%= link_to "(Edit)", edit_habit_path, class: "btn-header" %></span>
+
+
+
+</section>
+</div>

@@ -13,3 +13,102 @@
  *= require_tree .
  *= require_self
  */
+ .index-wrap{
+	 margin: 0, auto;
+	 min-width: 200px;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+ }
+header{
+	width: 100%;
+	text-align: left;
+	/*border: 2px solid black;*/
+	background-color: #403D39;
+	display: flex;
+	justify-content:flex-start;
+	align-items: baseline;
+	color: #FE5F00;
+}
+.header{
+	font-size: 32px;
+	font-weight: bolder;
+}
+.new-habit{
+	margin-left: 10px;
+	font-size: 20px;
+	color: #403D39;
+}
+.hn{
+  font-weight: bolder;
+  color: #FE5F00;
+	text-decoration: none
+}
+.btn{
+	color: #403D39;
+	text-decoration: none;
+  font-weight: bolder;
+}
+.btn-header{
+	color: #FE5F00;
+	text-decoration: none;
+}
+.goal{
+  font-size: 30px;
+}
+main{
+	padding-top: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	min-width: 200px;
+	max-width: 680px;
+	max-height: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: space-between;
+	justify-content: space-around;
+
+	/*border-left:  2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;*/
+}
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.each-habit{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	border-radius: 50%;
+	text-align: center;
+	/*border: 1px solid black;*/
+	width: 170px;
+	height: 170px;
+	margin: 27px;
+	background-color: #FE5F00;
+	font-family: 'Crimson Text', serif;
+	font-size: 15px;
+}
+
+html {
+	/*background-image: url("https://notedinstyle.co.uk/wp-content/uploads/2015/12/Personal-data-page-in-a-colourled-moleskine-daily-diary-planner.jpg");*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-width: 300px;
+	max-width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #f46e42;
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+.habit-goal {
+	color: black;
+}
+*=require animate

@@ -1,0 +1,13 @@
+<%=  form_for @habit do |f| %>
+<div class="form-field">
+  <%= f.label :name, "Name:" %><br>
+  <%= f.text_field :name %>
+</div>
+<br>
+<div class="form-field">
+  <%= f.label :goal, "Goal:" %><br>
+  <%= f.text_field :goal %>
+</div>
+
+<%= f.submit class: "submit-btn"%>
+<% end %>

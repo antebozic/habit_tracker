@@ -1,0 +1,7 @@
+<%= form_for [@habit, @occurrence] do |f| %>
+<div class="form-field">
+  <%= f.label :note, "Note:" %><br>
+  <%= f.text_field :note %>
+</div>
+<%= f.submit class: "submit-btn"%>
+<% end %>

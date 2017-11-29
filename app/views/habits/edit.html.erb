@@ -1,0 +1,9 @@
+<h2>Edit Habit</h2>
+
+<%= render "form" %>
+
+<%= form_for @habit, method: :delete do |f| %>
+  <%= f.submit "Delete Habit", class: "submit-btn" %>
+<% end %>
+
+<h3><%= link_to "<< Back to Habit", habit_path(@habit) %></h3>

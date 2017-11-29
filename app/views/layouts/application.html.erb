@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>HabitTracker</title>
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lora|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css" />
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +11,11 @@
   </head>
 
   <body>
+    <div class="wrapper">
+      <% flash.each do |type, message| %>
+  <p class="flash <%= type %>"><%= message %></p>
+<% end %>
     <%= yield %>
+  </div>
   </body>
 </html>
