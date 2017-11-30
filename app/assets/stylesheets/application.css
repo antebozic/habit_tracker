@@ -67,6 +67,11 @@
    flex-direction: row;
    justify-content: space-between;
  }
+ input[type=email],
+ input[type=password] {
+   width: 100%;
+   max-width: 150px;
+ }
  .header {
    font-size: 32px;
    font-weight: bolder;
