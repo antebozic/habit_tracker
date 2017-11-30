@@ -3,7 +3,7 @@
 <%= render "form" %>
 
 <%= form_for [@habit, @occurrence], method: :delete do |f| %>
-  <%= f.submit "Delete Occurrence", class: "submit-btn" %>
+<%= f.submit "Delete Occurrence", class: "submit-btn" %>
 <% end %>
 
 <h3><%= link_to "<< Back to Occurrence", habit_occurrence_path(@habit, @occurrence) %></h3>

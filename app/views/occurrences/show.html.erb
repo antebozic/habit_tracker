@@ -1,10 +1,10 @@
 <div class="occurrence show-occurrence">
   <div class="occurrence-header">
     <h2><%= @occurrence.note %></h4>
-    <span><%= link_to "(Edit)", edit_habit_occurrence_path(@occurrence.habit, @occurrence), class: "underline-links" %></span>
-  </div>
+      <span><%= link_to "(Edit)", edit_habit_occurrence_path(@occurrence.habit, @occurrence), class: "underline-links" %></span>
+    </div>
     <h2><%= @occurrence.updated_at.strftime("%Y-%m-%d") %>  </h2>
 
-</div>
+  </div>
 
-<h3><%= link_to "<< Go Back", habit_path(@habit) %></h3>
+  <h3><%= link_to "<< Go Back", habit_path(@habit) %></h3>

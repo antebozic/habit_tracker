@@ -1,9 +1,32 @@
-<h2>Edit Habit</h2>
+<div class="index-wrap">
+  <header>
+    <p class="header animated zoomIn"> <%= link_to "<< ", habit_path(@habit), class: "btn-header" %>Back to Habit </p>
+  </header>
 
-<%= render "form" %>
+  <section>
+    <h1>Edit Habit</h1>
 
-<%= form_for @habit, method: :delete do |f| %>
-  <%= f.submit "Delete Habit", class: "submit-btn" %>
-<% end %>
+    <h1><%= render "form" %></h1>
 
-<h3><%= link_to "<< Back to Habit", habit_path(@habit) %></h3>
+    <%= form_for @habit, method: :delete do |f| %>
+    <%= f.submit "Delete Habit", class: "submit-btn" %>
+    <% end %>
+  </section>
+
+  <footer>
+    <div class="footer">
+      <% flash.each do |type, message| %>
+      <p class="flash <%= type %> small"><%= message %> </p>
+      <% end %>
+    </div>
+    <div class="footer">
+      <% if !current_user %>
+      <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to "Sign in", new_user_session_path %>
+      <% else %>
+      <%= current_user.email %>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "small" %>
+      <% end %>
+    </div>
+  </footer>
+</div>

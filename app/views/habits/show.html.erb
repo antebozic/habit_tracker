@@ -1,30 +1,40 @@
 <div class="index-wrap">
   <header>
-    <p><%= link_to "<< All Habits", habits_path, class: "btn-header header animated zoomIn" %></p>
+    <p class="header animated zoomIn"> <%= link_to "<< ", habits_path, class: "btn-header" %>All Habits </p>
   </header>
-<section>
 
+  <div class="each-habit habit-name animated pulse">
+    <p class="btn"><%= @habit.name %></p>
+  </div>
 
-<div class="each-habit habit-name animated zoomIn">
-<p class="btn"><%= @habit.name %></p>
-</div>
+  <div class="goal">
+    <p>Goal: <%= @habit.goal %></p>
+  </div>
 
-<div class="goal">
-<p>Goal: <%= @habit.goal %></p>
-</div>
+  <div class="occurrences">
+    <% @occurrences.each do |occurrence| %>
+    <p><%= occurrence.updated_at.strftime("%Y-%m-%d") %> <%= occurrence.note %></p>
+    <% end %>
+    <p> <%= link_to "(+) New Occurrence", new_habit_occurrence_path(@habit), class: "btn" %> </>
+    </div>
+    <span><%= link_to "(Edit)", edit_habit_path, class: "btn-header" %></span>
+  </section>
 
-<div class="occurrences">
-<% @occurrences.each do |occurrence| %>
-<p><%= occurrence.updated_at.strftime("%Y-%m-%d") %> <%= occurrence.note %></p>
-<% end %>
-<p> <%= link_to "(+) New Occurrence", new_habit_occurrence_path(@habit), class: "btn" %> </>
-</div>
+  <footer>
+    <div class="footer">
+      <% flash.each do |type, message| %>
+      <p class="flash <%= type %> small"><%= message %> </p>
+      <% end %>
+    </div>
+    <div class="footer">
+      <% if !current_user %>
+      <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to "Sign in", new_user_session_path %>
+      <% else %>
+      <%= current_user.email %>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "small" %>
+      <% end %>
+    </div>
+  </footer>
 
-
-
-<span><%= link_to "(Edit)", edit_habit_path, class: "btn-header" %></span>
-
-
-
-</section>
 </div>

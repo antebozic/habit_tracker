@@ -1,5 +1,25 @@
-<h2 class="animated slideInLeft">New Occurrence</h2>
+<div class="index-wrap">
+  <header>
+    <p class="header animated zoomIn"> <%= link_to "<< ", habit_path(@habit), class: "btn-header" %>Back to Habit </p>
+  </header>
 
-<%= render "form" %>
+  <h2 class="animated slideInLeft">New Occurrence</h2>
+  <%= render "form" %>
 
-<h3><%= link_to "<< Back to Habits", habits_path %></h3>
+  <footer>
+    <div class="footer">
+      <% flash.each do |type, message| %>
+      <p class="flash <%= type %> small"><%= message %> </p>
+      <% end %>
+    </div>
+    <div class="footer">
+      <% if !current_user %>
+      <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to "Sign in", new_user_session_path %>
+      <% else %>
+      <%= current_user.email %>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "small" %>
+      <% end %>
+    </div>
+  </footer>
+</div>

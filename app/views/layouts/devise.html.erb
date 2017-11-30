@@ -11,8 +11,21 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <%= yield %>
+  <div class="index-wrap">
+    <header>
+      <p class="header btn-header animated zoomIn">Welcome to Habit Tracker</p>
+    </header>
+    <section>
+      <h1><%= yield %></h1>
+    </section>
+    <footer>
+      <div class="footer">
+        <% flash.each do |type, message| %>
+        <p class="flash <%= type %> small"><%= message %> </p>
+        <% end %>
+      </div>
+
+    </footer>
   </div>
 </body>
 </html>
