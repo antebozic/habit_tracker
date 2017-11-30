@@ -4,9 +4,9 @@
   </header>
 
   <section>
-    <h1>Edit Habit</h1>
-
-    <h1><%= render "form" %></h1>
+    <h1> Edit Habit </h1>
+  </br>
+    <h1> <%= render "form" %> </h1>
 
     <%= form_for @habit, method: :delete do |f| %>
     <%= f.submit "Delete Habit", class: "submit-btn" %>
