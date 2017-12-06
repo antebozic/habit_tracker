@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Habit Tracker is application based on Ruby on Rails technology. 
+When creating this application, I wanted to create straight forward user experience, where after log in, it would be very simple to make input and see tracking records.
+This resulted in creating one to many relations between user and the habits, and one to many relations between habit and occurrences. I created category model and controller that might be used if I upgrade functionalities of the app.
+Data is stored in MySQL data base. The core of application logic is found in Habit controller..
+I first developed Habit, Occurrence, and Category models and controllers. One I had that set-up, I installed Devise gem and created User.
+For the styling, I used Animate.css package and flexbox for responsive design.
+As part of unsolved problems, I would like to develop better way of data presentation for tracked habits, installing gem like kick chart. I’m planning to implement gem for mail verification and possible email reminders. 
