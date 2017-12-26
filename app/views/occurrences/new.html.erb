@@ -2,10 +2,10 @@
   <header>
     <p class="header animated zoomIn"> <%= link_to "<< ", habit_path(@habit), class: "btn-header" %>Back to Habit </p>
   </header>
-
+<section class="new">
   <h1 class="animated slideInLeft"> New Occurrence </h1>
   <h1> <%= render "form" %> </h1>
-
+</section >
   <footer>
     <div class="footer">
       <% flash.each do |type, message| %>

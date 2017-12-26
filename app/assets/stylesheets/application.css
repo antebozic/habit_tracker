@@ -23,7 +23,7 @@
    height: 100%;
    text-align: center;
    color: #f46e42;
-   background-color: #FE5F00;
+   /* background-color: #FE5F00; */
    font-family: 'Roboto', sans-serif;
  }
  header {
@@ -33,6 +33,7 @@
    justify-content: flex-start;
    align-items: baseline;
    color: #FE5F00;
+   margin-bottom: 60px;
  }
  main {
    flex: 1 0 auto;
@@ -67,10 +68,56 @@
    flex-direction: row;
    justify-content: space-between;
  }
+
  input[type=email],
  input[type=password] {
-   width: 100%;
-   max-width: 150px;
+
+     width: 100%;
+     max-width: 150px;
+    border: 1px solid #FE5F00;
+    color: black;
+     background-color: #FEDD32;
+     border-radius: 4px;
+     font-weight: bold;
+ }
+input{
+  background-color: #FEDD32;
+}
+#habit_goal {
+  width: 220px;
+  text-align: center;
+}
+#habit_name {
+  width: 220px;
+  text-align: center;
+}
+#occurrence_note {
+  width: 220px;
+  text-align: center;
+}
+input[type=submit]{
+  background-color: #FEDD32;
+  border: 1px solid #FE5F00;
+  color: #FE5F00;
+  border-radius: 4px;
+}
+input[type=submit]:hover{
+  border: 1px solid black;
+  color: black;
+}
+h1{
+  font-size: 27px;
+}
+
+ a{
+   text-decoration: none;
+   color: #FE5F00;
+ }
+ a:hover{
+   color: black;
+ }
+ .new{
+   padding-top: 130px;
  }
  .header {
    font-size: 32px;
@@ -102,6 +149,9 @@
    color: #403D39;
    text-decoration: none;
    font-weight: bolder;
+ }
+ .start{
+   font-size: 25px;
  }
  .btn-header {
    color: #FE5F00;
@@ -136,5 +186,21 @@
    color: #FE5F00;
    text-decoration: none;
  }
+.intro{
+  width: 350px;
+  padding-top: 170px;
+  color: black;
+  font-family: 'Crimson Text', serif;
+}
+
+.login-form {
+  font-size: 13px;
+  width: 120px;
+  padding: 20px;
+
+}
+.flash{
+  font-size: 20px;
+}
 
  *=require animate

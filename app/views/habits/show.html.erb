@@ -16,6 +16,8 @@
     <p><%= occurrence.updated_at.strftime("%Y-%m-%d") %> <%= occurrence.note %></p>
     <% end %>
     <p> <%= link_to "(+) New Occurrence", new_habit_occurrence_path(@habit), class: "btn" %> </>
+
+      
     </div>
     <span><%= link_to "(Edit)", edit_habit_path, class: "btn-header" %></span>
   </section>

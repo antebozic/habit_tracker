@@ -3,9 +3,9 @@
     <p class="header animated zoomIn"> <%= link_to "<< ", habit_path(@habit), class: "btn-header" %>Back to Habit </p>
   </header>
 
-  <section>
+  <section class="new">
     <h1> Edit Habit </h1>
-  </br>
+  
     <h1> <%= render "form" %> </h1>
 
     <%= form_for @habit, method: :delete do |f| %>
