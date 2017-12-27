@@ -1,9 +1,33 @@
 <div class="wrap">
   <header>
+
+    <div>
+
+
     <p class="header animated zoomIn">Habits</p>
+
     <div class="new-habit animated zoomIn">
       <%= link_to "(+)", new_habit_path, class: "btn-header" %>
     </div>
+</div>
+
+  <div>
+
+    <div class="footer">
+
+    </div>
+    <div class="footer">
+      <% if !current_user %>
+      <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to "Sign in", new_user_session_path %>
+      <% else %>
+      <%= current_user.email %>
+      <%= link_to"(  Sign out  )", destroy_user_session_path, :method => :delete, class: "small" %>
+      <% end %>
+    </div>
+
+  </div>
+
   </header>
   <div class="index-wrap">
     <main>
@@ -22,20 +46,7 @@
 
     </main>
     <footer>
-      <div class="footer">
-        <% flash.each do |type, message| %>
-        <p class="flash <%= type %> small"><%= message %> </p>
-        <% end %>
-      </div>
-      <div class="footer">
-        <% if !current_user %>
-        <%= link_to "Sign up", new_user_registration_path %>
-        <%= link_to "Sign in", new_user_session_path %>
-        <% else %>
-        <%= current_user.email %>
-        <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "small" %>
-        <% end %>
-      </div>
+
     </footer>
   </div>
 </div>

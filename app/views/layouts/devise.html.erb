@@ -11,24 +11,38 @@
 </head>
 
 <body>
+
+
   <div class="index-wrap">
     <header>
+      <div>
       <p class="header btn-header animated zoomIn">Welcome to Habit Tracker</p>
+    </div>
+    <div>
+      <% flash.each do |type, message| %>
+      <p class="flash <%= type %> small"><%= message %> </p>
+      <% end %>
+    </div>
     </header>
+
     <section>
 
-  <div class="intro" %><p class="animated zoomIn">Your companion when it comes to tracking things that really matter.</p>
+  <div class="intro" %><p class="animated zoomIn intro">Your companion when it comes to tracking things that really matter.</p>
   </div>
       <div class="login-form btn-header"> <%= yield %> </div>
-    </section>
-    <footer>
-      <div class="footer">
-        <% flash.each do |type, message| %>
-        <p class="flash <%= type %> small"><%= message %> </p>
-        <% end %>
-      </div>
 
-    </footer>
+
+
+
+
+    </section>
+
+
+
+
+
   </div>
+
+
 </body>
 </html>
