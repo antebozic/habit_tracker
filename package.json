@@ -1,5 +1,7 @@
 {
   "name": "habit_tracker",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "redux": "^3.7.2"
+  }
 }

@@ -46,6 +46,16 @@
    color: #FE5F00;
    margin-bottom: 60px;
  }
+ .dno{
+   padding-top: 30px;
+   width: 100%;
+   text-align: right;
+
+ }
+ .chart{
+   width: 75%;
+   border-bottom:10px solid #f46e42;
+ }
  main {
    flex: 1 0 auto;
    padding-top: 50px;
@@ -77,7 +87,7 @@
    justify-content: flex-start;
  }
 
- .footer {
+ .login {
    display: flex;
    justify-content:space-between;
    align-items: baseline;

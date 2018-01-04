@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171129192711) do
+ActiveRecord::Schema.define(version: 20180103182847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20171129192711) do
     t.bigint "habit_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "happened", default: 1
     t.index ["habit_id"], name: "index_occurrences_on_habit_id"
   end
 

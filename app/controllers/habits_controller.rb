@@ -10,7 +10,8 @@ class HabitsController < ApplicationController
 
   def show
     @habit = Habit.find(params[:id])
-    @occurrences = @habit.occurrences.all
+    @occurrences = @habit.occurrences
+    @occurrence_data = @habit.occurrences.group_by_day(:created_at).count
   end
 
   def create

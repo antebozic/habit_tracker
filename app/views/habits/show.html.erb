@@ -4,8 +4,8 @@
     <p class="header animated zoomIn"> <%= link_to "<< ", habits_path, class: "btn-header" %>All Habits </p>
     </div>
     <div>
-    
-    <div class="footer">
+
+    <div class="login">
       <% if !current_user %>
       <%= link_to "Sign up", new_user_registration_path %>
       <%= link_to "Sign in", new_user_session_path %>
@@ -26,19 +26,22 @@
     <p>Goal: <%= @habit.goal %></p>
   </div>
 
-  <div class="occurrences">
-    <% @occurrences.each do |occurrence| %>
-    <p><%= occurrence.updated_at.strftime("%Y-%m-%d") %> <%= occurrence.note %></p>
-    <% end %>
-    <p> <%= link_to "(+) New Occurrence", new_habit_occurrence_path(@habit), class: "btn" %> </>
+  <dv class="chart">
+    <%= line_chart @occurrence_data, colors: ["black"] %>
+  </div>
 
+  <div class="occurrences">
+    <p> <%= link_to "(+) New Occurrence", new_habit_occurrence_path(@habit), class: "btn" %> </p>
+
+      <span><%= link_to "(Edit)", edit_habit_path, class: "btn-header" %></span>
+
+
+    <% @occurrences.each do |occurrence| %>
+    <p><%= occurrence.updated_at.strftime('%B %e at %l:%M %p') %> <br><%= occurrence.note %></p>
+    <% end %>
 
     </div>
-    <span><%= link_to "(Edit)", edit_habit_path, class: "btn-header" %></span>
+
   </section>
-
-  <footer>
-
-  </footer>
 
 </div>

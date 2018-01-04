@@ -13,10 +13,10 @@
 
   <div>
 
-    <div class="footer">
+    <div class="login">
 
     </div>
-    <div class="footer">
+    <div class="login">
       <% if !current_user %>
       <%= link_to "Sign up", new_user_registration_path %>
       <%= link_to "Sign in", new_user_session_path %>
@@ -30,6 +30,8 @@
 
   </header>
   <div class="index-wrap">
+
+
     <main>
       <% @habits.each do |habit| %>
       <% if habit.user == current_user %>
@@ -45,8 +47,5 @@
       <% end %>
 
     </main>
-    <footer>
-
-    </footer>
   </div>
 </div>
