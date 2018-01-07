@@ -222,3 +222,5 @@ a:hover {
 .flash {
 	font-size: 20px;
 }
+
+*= require animate
