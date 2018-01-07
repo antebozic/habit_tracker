@@ -35,7 +35,7 @@
     <main>
       <% @habits.each do |habit| %>
       <% if habit.user == current_user %>
-      <div class="each-habit animated pulse">
+      <div class="each-habit animated pulse" id="habit">
         <div class="habit-name">
           <h3> <%= link_to "#{habit.name}", habit_path(habit), class: "btn" %> </h3>
         </div>
